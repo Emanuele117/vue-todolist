@@ -19,7 +19,7 @@
                 <button>Add</button>
             </div>
 
-            <div class="tasks" >
+            <div class="tasks" v-if= "tasks.length > 0">
                 <div class="item" v-for= "(task,index) in tasks">
                     <p>{{task}}</p>
 
@@ -27,6 +27,9 @@
                         <i class="fas fa-times-circle fa-lg fa-fw" @click= "removeTask(index)"></i>
                     </div>
                 </div>
+            </div>
+            <div v-else>
+                <p>Nothing to do! Enjoy you day</p>
             </div>
             
         </div>
