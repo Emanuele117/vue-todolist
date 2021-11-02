@@ -9,17 +9,50 @@
 const app = new Vue({
     el: '#app',
     data: {
-
+        newTask: '',
         tasks: [
             'far cambiare le gomme alla macchina',
             'Andare in palestra',
             'fare la spesa',
             'dar da mangiare al gatto'
         ],
+        error: false
     },
     methods: {
         removeTask(i) {
             this.tasks.splice(i, 1)
+        },
+        addTask() {
+            if (this.newTask != '' && this.newTask.length > 5) {
+                this.tasks.push(this.newTask)
+                this.error = false
+            } else {
+                this.error = true
+            }
+            this.newTask = ''
         }
     }
 })
+
+
+
+/* *
+STRUMENTI USATI
+
+- array
+
+- v-for
+
+- eventlistner (v-on/@click)
+
+- splice(i)
+
+- input
+
+- v-model
+
+- @click
+
+- push
+
+*/

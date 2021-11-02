@@ -15,8 +15,9 @@
                 <img src="" alt="">
             </div>
             <div class="addTasks">
-                <input type="text" v-model="newTask">
-                <button>Add</button>
+                <input type="text" v-model="newTask" @keyup.enter= "addTask">
+                <button @click= "addTask">Add</button>
+                <div class="error" v-show= "error">Devi inserire una task di almeno 5 caratteri!</div>
             </div>
 
             <div class="tasks" v-if= "tasks.length > 0">
