@@ -19,15 +19,16 @@
                 <button>Add</button>
             </div>
 
-            <div class="tasks">
+            <div class="tasks" >
                 <div class="item" v-for= "(task,index) in tasks">
                     <p>{{task}}</p>
 
                     <div class="delete-task">
-                        <i class="fas fa-times-circle fa-lg fa-fw"></i>
+                        <i class="fas fa-times-circle fa-lg fa-fw" @click= "removeTask(index)"></i>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

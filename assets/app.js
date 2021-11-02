@@ -9,11 +9,17 @@
 const app = new Vue({
     el: '#app',
     data: {
+
         tasks: [
             'far cambiare le gomme alla macchina',
             'Andare in palestra',
             'fare la spesa',
             'dar da mangiare al gatto'
         ],
+    },
+    methods: {
+        removeTask(i) {
+            this.tasks.splice(i, 1)
+        }
     }
 })
