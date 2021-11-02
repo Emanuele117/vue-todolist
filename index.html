@@ -12,11 +12,11 @@
     <div id="app">
         <div class="container">
             <div class="logo">
-                <img src="" alt="">
+                <img :src="logo">
             </div>
             <div class="addTasks">
-                <input type="text" v-model="newTask" @keyup.enter= "addTask">
-                <button @click= "addTask">Add</button>
+                <input type="text" v-model="newTask" @keyup.enter= "addTask" class="text">
+                <button @click= "addTask">Aggiungi</button>
                 <div class="error" v-show= "error">Devi inserire una task di almeno 5 caratteri!</div>
             </div>
 

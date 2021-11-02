@@ -16,7 +16,8 @@ const app = new Vue({
             'fare la spesa',
             'dar da mangiare al gatto'
         ],
-        error: false
+        error: false,
+        logo: 'https://www.boolean.careers/images/misc/logo.png'
     },
     methods: {
         removeTask(i) {
