@@ -12,7 +12,7 @@
     <div id="app">
         <div class="container">
             <div class="logo">
-                <img :src="logo">
+                <img :src="logo" class="img">
             </div>
             <div class="addTasks">
                 <input type="text" v-model="newTask" @keyup.enter= "addTask" class="text">
@@ -22,8 +22,9 @@
 
             <div class="tasks" v-if= "tasks.length > 0">
                 <div class="item" v-for= "(task,index) in tasks">
+                    
                     <p>{{task}}</p>
-
+                    
                     <div class="delete-task">
                         <i class="fas fa-times-circle fa-lg fa-fw" @click= "removeTask(index)"></i>
                     </div>
